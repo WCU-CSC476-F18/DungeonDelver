@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Dray : MonoBehaviour {
+
+    public enum eMode { idle, move, attack, transition }
+
     [Header("Set in Inspector")]
     public float speed = 5;
+    public float attackDuration = 0.25f;
+    public float attackDelay = 0.5f;
 
     [Header("Set Dynamically")]
     public int dirHeld = -1;
+    public int facing = 1;
+    public eMode mode = eMode.idle;
+
+    private float timeAtkDone = 0;
+    private float timeAtkNext = 0; 
 
     private Rigidbody rigid;
     private Animator anim;
@@ -49,7 +59,56 @@ public class Dray : MonoBehaviour {
             //the last line that evaluates to true will override the rest
         }
 
+        //Pressing the attack button(s)
+        if(Input.GetKeyDown(KeyCode.Space) && Time.time >= timeAtkNext)
+        {
+            mode = eMode.attack;
+            timeAtkDone = Time.time + attackDuration;
+            timeAtkNext = Time.time + attackDelay;
+        }
+
+        if(Time.time >= timeAtkDone)
+        {
+            mode = eMode.idle;
+        }
+
+        if(mode != eMode.attack)
+        {
+            if(dirHeld == -1)
+            {
+                mode = eMode.idle;
+            }
+            else
+            {
+                facing = dirHeld;
+                mode = eMode.move;
+            }
+        }
+
+        //Act on the current mode
         Vector3 vel = Vector3.zero;
+        switch (mode)
+        {
+            case eMode.attack:
+                anim.CrossFade("Dray_Attack_" + facing, 0);
+                anim.speed = 0;
+                break;
+            
+            case eMode.idle:
+                anim.CrossFade("Dray_Walk_" + facing, 0);
+                anim.speed = 0;
+                break;
+
+            case eMode.move:
+                vel = directions[dirHeld];
+                anim.CrossFade("Dray_Walk_" + facing, 0);
+                anim.speed = 1;
+                break;
+        }
+
+        rigid.velocity = vel * speed;
+
+        /*
         if (dirHeld > -1) vel = directions[dirHeld]; // sets direction given key input
 
         rigid.velocity = vel * speed;
@@ -64,5 +123,6 @@ public class Dray : MonoBehaviour {
             anim.CrossFade("Dray_Walk_" + dirHeld, 0);
             anim.speed = 1;
         }
+        */
 	}
 }
