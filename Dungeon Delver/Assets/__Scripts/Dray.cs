@@ -124,5 +124,7 @@ public class Dray : MonoBehaviour {
             anim.speed = 1;
         }
         */
+
+        Debug.Log("Test Modification");
 	}
 }

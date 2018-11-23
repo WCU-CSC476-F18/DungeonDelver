@@ -81,6 +81,8 @@ public class Tile : MonoBehaviour {
                 bColl.enabled = false;
                 break;
         }
+
+        Debug.Log("Test Modification");
     }
 
 	// Use this for initialization

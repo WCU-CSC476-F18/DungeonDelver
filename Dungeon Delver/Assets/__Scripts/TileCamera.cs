@@ -51,6 +51,7 @@ public class TileCamera : MonoBehaviour {
                     MAP[i, j] = int.Parse(tileNums[i], hexNum);
             }
         }
+
         print("Parsed "+SPRITES.Length+" sprites.");
         print("Map size: " + W + " wide by " + H + " high");
 
@@ -75,6 +76,7 @@ public class TileCamera : MonoBehaviour {
                 }
             }
         }
+        Debug.Log("Test Modification");
     }
 
     static public int GET_MAP( int x, int y)
@@ -100,8 +102,8 @@ public class TileCamera : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        Debug.Log("Test Modification");
+    }
 	
 	// Update is called once per frame
 	void Update () {

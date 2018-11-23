@@ -23,5 +23,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         eRend = GetComponent<SpriteRenderer>();
+
+        Debug.Log("Test Modification");
     }
 }

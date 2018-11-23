@@ -31,5 +31,7 @@ public class Skeletos : Enemy {
     {
         facing = Random.Range(0, 4);
         timeNextDecision = Time.time + Random.Range(timeThinkMin, timeThinkMax);
+
+        Debug.Log("Test Modification");
     }
 }
