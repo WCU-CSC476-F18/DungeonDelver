@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-                                                         {
-    protected static Vector3[] directions = new Vector3[]{
-        Vector3.right, Vector3.up, Vector3.left, Vector3.down};
+{
+    protected static Vector3[] directions = new Vector3[]
+    { Vector3.right, Vector3.up, Vector3.left, Vector3.down };
 
     [Header("Set in Inspector: Enemy:")]
     public float maxHealth = 1;
@@ -23,7 +23,5 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         eRend = GetComponent<SpriteRenderer>();
-
-        Debug.Log("Test Modification");
     }
 }

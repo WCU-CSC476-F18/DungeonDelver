@@ -20,7 +20,6 @@ public class InRoom : MonoBehaviour {
             rPos.y = Mathf.Clamp(rPos.y, WALL_T, ROOM_H - 1 - WALL_T);
             roomPos = rPos;
         }
-
     }
 
     //Where is this character in local room coordinates?
@@ -61,5 +60,20 @@ public class InRoom : MonoBehaviour {
             rm.y *= ROOM_H;
             transform.position = rm + rPos;
         }
+    }
+
+    //What is the closest grid location to this character?
+    public Vector2 GetRoomPosOnGrid(float mult = -1)
+    {
+        if(mult == -1)
+        {
+            mult = gridMult;
+        }
+        Vector2 rPos = roomPos;
+        rPos /= mult;
+        rPos.x = Mathf.Round(rPos.x);
+        rPos.y = Mathf.Round(rPos.y);
+        rPos *= mult;
+        return rPos;
     }
 }

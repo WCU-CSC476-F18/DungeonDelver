@@ -14,7 +14,6 @@ public class SwordController : MonoBehaviour {
         //Deactivate the sword
         sword.SetActive(false);
 
-        Debug.Log("Test Modification");
     }
 	
 	// Update is called once per frame

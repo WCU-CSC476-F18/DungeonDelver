@@ -76,7 +76,6 @@ public class TileCamera : MonoBehaviour {
                 }
             }
         }
-        Debug.Log("Test Modification");
     }
 
     static public int GET_MAP( int x, int y)
@@ -102,7 +101,6 @@ public class TileCamera : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log("Test Modification");
     }
 	
 	// Update is called once per frame

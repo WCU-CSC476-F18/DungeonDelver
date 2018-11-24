@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dray : MonoBehaviour {
+public class Dray : MonoBehaviour, IFacingMover {
 
     public enum eMode { idle, move, attack, transition }
 
@@ -21,6 +21,7 @@ public class Dray : MonoBehaviour {
 
     private Rigidbody rigid;
     private Animator anim;
+    private InRoom inRm;
 
     private Vector3[] directions = new Vector3[]
     {
@@ -42,6 +43,7 @@ public class Dray : MonoBehaviour {
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        inRm = GetComponent<InRoom>();
     }
     // Use this for initialization
     void Start () {
@@ -124,7 +126,46 @@ public class Dray : MonoBehaviour {
             anim.speed = 1;
         }
         */
-
-        Debug.Log("Test Modification");
 	}
+
+    //Implementation of IFacingMover
+    public int GetFacing()
+    {
+        return facing;
+    }
+
+    public bool moving
+    {
+        get
+        {
+            return (mode == eMode.move);
+        }
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
+    public float gridMult
+    {
+        get { return inRm.gridMult; }
+    }
+
+    public Vector2 roomPos
+    {
+        get { return inRm.roomPos; }
+        set { inRm.roomPos = value; }
+    }
+
+    public Vector2 roomNum
+    {
+        get { return inRm.roomNum; }
+        set { inRm.roomNum = value; }
+    }
+
+    public Vector2 GetRoomPosOnGrid(float mult = -1)
+    {
+        return inRm.GetRoomPosOnGrid(mult);
+    }
 }
