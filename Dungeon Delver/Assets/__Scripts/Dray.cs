@@ -22,6 +22,9 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
     public eMode mode = eMode.idle;
     public int numKeys = 0;
     public bool invincible = false;
+    public bool hasGrappler = false;
+    public Vector3 lastSafeLoc;
+    public int lastSafeFacing;
 
     [SerializeField]
     private int _health;
@@ -67,6 +70,10 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
         anim = GetComponent<Animator>();
         inRm = GetComponent<InRoom>();
         health = maxHealth;
+
+        //The start position is safe
+        lastSafeLoc = transform.position;
+        lastSafeFacing = facing;
     }
     // Use this for initialization
     void Start () {
@@ -211,6 +218,7 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
                 break;
         }
 
+        //Make sure that the rm we want to jump to is valid
         if(rm.x >= 0 && rm.x <= InRoom.MAX_RM_X)
         {
             if(rm.y >= 0 && rm.y <= InRoom.MAX_RM_Y)
@@ -218,6 +226,8 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
                 roomNum = rm;
                 transitionPos = InRoom.DOORS[(doorNum+2)%4];
                 roomPos = transitionPos;
+                lastSafeLoc = transform.position;
+                lastSafeFacing = facing;
                 mode = eMode.transition;
                 transitionDone = Time.time + transitionDelay;
 
@@ -272,12 +282,28 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
             case PickUp.eType.health:
                 health = Mathf.Min(health + 2, maxHealth);
                 break;
+
             case PickUp.eType.key:
                 keyCount++;
+                break;
+
+            case PickUp.eType.grappler:
+                hasGrappler = true;
                 break;
         }
 
         Destroy(colld.gameObject);
+    }
+
+    public void ResetInRoom(int healthLoss = 0)
+    {
+        transform.position = lastSafeLoc;
+        facing = lastSafeFacing;
+        health -= healthLoss;
+
+        //Make Dray invincible
+        invincible = true;
+        invincibleDone = Time.time + invincibleDuration;
     }
 
     //Implementation of IFacingMover
