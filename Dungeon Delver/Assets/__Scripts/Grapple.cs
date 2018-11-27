@@ -73,7 +73,7 @@ public class Grapple : MonoBehaviour {
         {
             case eMode.none:
                 //If the grapple button is pressed
-                if (Input.GetKeyDown(KeyCode.X))
+                if (Input.GetKeyDown(KeyCode.J))
                     StartGrapple();
                 break;
         }
