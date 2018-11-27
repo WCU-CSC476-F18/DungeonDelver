@@ -20,14 +20,13 @@ public class Skeletos : Enemy, IFacingMover {
         base.Awake();
         inRm = GetComponent<InRoom>();
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
-	void Update () {
+	override protected void Update () {
+        base.Update();
+        if (knockback)
+            return; 
+
         if (Time.time >= timeNextDecision)
             DecideDirection();
 

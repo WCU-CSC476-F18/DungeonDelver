@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{AB661688-7F8D-F030-BFD0-79AA71078BDF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/__Scripts/Dray.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/__Scripts/Enemy.cs">
     <Files>
       <File FileName="Assets/__Scripts/TileCamera.cs" Line="79" Column="6" />
       <File FileName="Assets/__Scripts/Tile.cs" Line="32" Column="45" />
       <File FileName="Assets/__Scripts/Dray.cs" Line="19" Column="27" />
-      <File FileName="Assets/__Scripts/Enemy.cs" Line="27" Column="2" />
+      <File FileName="Assets/__Scripts/Enemy.cs" Line="11" Column="32" />
       <File FileName="Assets/__Scripts/Skeletos.cs" Line="35" Column="40" />
       <File FileName="Assets/__Scripts/SwordController.cs" Line="18" Column="2" />
       <File FileName="Assets/__Scripts/InRoom.cs" Line="19" Column="7" />
