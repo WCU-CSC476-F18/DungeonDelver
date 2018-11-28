@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: 7e922f0e159c37c419adb33bc9c83179
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bat_0
+    21300002: Bat_1
+    21300004: Bat_2
+    21300006: Bat_3
+    21300008: Bat_4
+    21300010: Bat_5
+    21300012: Bat_6
+    21300014: Bat_7
+    21300016: Bat_8
+    21300018: Bat_9
+    21300020: Bat_10
+    21300022: Bat_11
+    21300024: Bat_12
+    21300026: Bat_13
+    21300028: Bat_14
+    21300030: Bat_15
+    21300032: Bat_16
+    21300034: Bat_17
+    21300036: Bat_18
+    21300038: Bat_19
+    21300040: Bat_20
+    21300042: Bat_21
+    21300044: Bat_22
+    21300046: Bat_23
+    21300048: Bat_24
+    21300050: Bat_25
+    21300052: Bat_26
+    21300054: Bat_27
+    21300056: Bat_28
+    21300058: Bat_29
+    21300060: Bat_30
+    21300062: Bat_31
+    21300064: Bat_32
+    21300066: Bat_33
+    21300068: Bat_34
+    21300070: Bat_35
+    21300072: Bat_36
+    21300074: Bat_37
+    21300076: Bat_38
+    21300078: Bat_39
+    21300080: Bat_40
+    21300082: Bat_41
+    21300084: Bat_42
+    21300086: Bat_43
+    21300088: Bat_44
+    21300090: Bat_45
+    21300092: Bat_46
+    21300094: Bat_47
+    21300096: Bat_48
+    21300098: Bat_49
+    21300100: Bat_50
+    21300102: Bat_51
+    21300104: Bat_52
+    21300106: Bat_53
+    21300108: Bat_54
+    21300110: Bat_55
+    21300112: Bat_56
+    21300114: Bat_57
+    21300116: Bat_58
+    21300118: Bat_59
+    21300120: Bat_60
+    21300122: Bat_61
+    21300124: Bat_62
+    21300126: Bat_63
+    21300128: Bat_64
+    21300130: Bat_65
+    21300132: Bat_66
+    21300134: Bat_67
+    21300136: Bat_68
+    21300138: Bat_69
+    21300140: Bat_70
+    21300142: Bat_71
+    21300144: Bat_72
+    21300146: Bat_73
+    21300148: Bat_74
+    21300150: Bat_75
+    21300152: Bat_76
+    21300154: Bat_77
+    21300156: Bat_78
+    21300158: Bat_79
+    21300160: Bat_80
+    21300162: Bat_81
+    21300164: Bat_82
+    21300166: Bat_83
+    21300168: Bat_84
+    21300170: Bat_85
+    21300172: Bat_86
+    21300174: Bat_87
+    21300176: Bat_88
+    21300178: Bat_89
+    21300180: Bat_90
+    21300182: Bat_91
+    21300184: Bat_92
+    21300186: Bat_93
+    21300188: Bat_94
+    21300190: Bat_95
+    21300192: Bat_96
+    21300194: Bat_97
+    21300196: Bat_98
+    21300198: Bat_99
+    21300200: Bat_100
+    21300202: Bat_101
+    21300204: Bat_102
+    21300206: Bat_103
+    21300208: Bat_104
+    21300210: Bat_105
+    21300212: Bat_106
+    21300214: Bat_107
+    21300216: Bat_108
+    21300218: Bat_109
+    21300220: Bat_110
+    21300222: Bat_111
+    21300224: Bat_112
+    21300226: Bat_113
+    21300228: Bat_114
+    21300230: Bat_115
+    21300232: Bat_116
+    21300234: Bat_117
+    21300236: Bat_118
+    21300238: Bat_119
+    21300240: Bat_120
+    21300242: Bat_121
+    21300244: Bat_122
+    21300246: Bat_123
+    21300248: Bat_a
+    21300250: Bat_b
+    21300252: Bat_c
+    21300254: Bat_d
+    21300256: Bat_128
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bat_a
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 3
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4700d8b7fce62504b9d0bb52da73ede5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_b
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b1851f83173a249b6e99468c970638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_c
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5046750dc6a9dc847badbe2bb08891e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_d
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 3
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd70945b45f71a244ab1d13fc8227e43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d796777f22731954a9c70e2162c44b6d
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

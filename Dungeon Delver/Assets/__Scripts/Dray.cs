@@ -237,7 +237,7 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
 
     void OnCollisionEnter (Collision coll)
     {
-        if (invincible) return; //Return ifn Dray can't be damaged
+        if (invincible) return; //Return if Dray can't be damaged
         DamageEffect dEf = coll.gameObject.GetComponent<DamageEffect>();
         if (dEf == null) return; //If no DamageEffect, exit this method
 
