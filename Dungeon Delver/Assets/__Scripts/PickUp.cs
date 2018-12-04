@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUp : MonoBehaviour {
-    public enum eType { key, health, grappler }
+    public enum eType { key, health, grappler, treasure }
 
     public static float COLLIDER_DELAY = 0.5f;
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
 
@@ -164,23 +165,6 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
         }
 
         rigid.velocity = vel * speed;
-
-        /*
-        if (dirHeld > -1) vel = directions[dirHeld]; // sets direction given key input
-
-        rigid.velocity = vel * speed;
-
-        //Animation
-        if (dirHeld == -1)
-        {
-            anim.speed = 0; //freezes Dray in place
-        }
-        else
-        {
-            anim.CrossFade("Dray_Walk_" + dirHeld, 0);
-            anim.speed = 1;
-        }
-        */
 	}
 
     void LateUpdate()
@@ -270,6 +254,14 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
             mode = eMode.knockback;
             knockbackDone = Time.time + knockbackDuration;
         }
+
+        //fatality
+        if(health == 0)
+        {
+            //Get the current scene
+            Scene thisScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(thisScene.name); //reload this scene
+        }
     }
 
     void OnTriggerEnter(Collider colld)
@@ -289,6 +281,10 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
 
             case PickUp.eType.grappler:
                 hasGrappler = true;
+                break;
+
+            case PickUp.eType.treasure:
+                SceneManager.LoadScene("Game_Over");
                 break;
         }
 
