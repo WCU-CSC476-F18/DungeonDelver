@@ -256,7 +256,7 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
         }
 
         //fatality
-        if(health == 0)
+        if(health <= 0)
         {
             //Get the current scene
             Scene thisScene = SceneManager.GetActiveScene();

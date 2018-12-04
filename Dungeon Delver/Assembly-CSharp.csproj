@@ -99,6 +99,7 @@
     <None Include="Assets\Resources\DelverGrappleable.txt" />
     <None Include="Assets\Resources\DelverData_Hat.txt" />
     <None Include="Assets\Resources\DelverData.txt" />
+    <None Include="Assets\Resources\DelverData_Hat_1.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/CSC 476 Game Development/DungeonDelver/Dungeon Delver/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
