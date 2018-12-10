@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bat : Enemy, IFacingMover {
 
     [Header("Set in Inspector: Bat")]
-    public int speed = 2;
+    public int speed = 3;
     public float timeThinkMin = 1f;
     public float timeThinkMax = 4f;
 
@@ -30,6 +30,18 @@ public class Bat : Enemy, IFacingMover {
 
         if (Time.time >= timeNextDecision)
             DecideDirection();
+
+        //Only move if Dray is in the room
+        GameObject d = GameObject.Find("Dray");
+        Dray player = (Dray)d.GetComponent(typeof(Dray));
+        if (player.GetRoomNum() == roomNum)
+        {
+            speed = 3;
+        }
+        else
+        {
+            speed = 0;
+        }
 
         //rigid is inherited from Enemy and is initialized in Enemy.Awake()
         rigid.velocity = directions[facing] * speed;

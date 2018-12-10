@@ -33,6 +33,18 @@ public class Knight : Enemy, IFacingMover
         if (Time.time >= timeNextDecision)
             DecideDirection();
 
+        //Only move if Dray is in the room
+        GameObject d = GameObject.Find("Dray");
+        Dray player = (Dray)d.GetComponent(typeof(Dray));
+        if (player.GetRoomNum() == roomNum)
+        {
+            speed = 1;
+        }
+        else
+        {
+            speed = 0;
+        }
+
         anim.CrossFade("Knight_" + facing, 0);
         //rigid is inherited from Enemy and is initialized in Enemy.Awake()
         rigid.velocity = directions[facing] * speed; //Makes enemy move
