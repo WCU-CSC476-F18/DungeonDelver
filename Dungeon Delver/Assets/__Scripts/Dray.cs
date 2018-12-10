@@ -343,6 +343,11 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
         return inRm.GetRoomPosOnGrid(mult);
     }
 
+    public Vector2 GetRoomNum()
+    {
+        return roomNum;
+    }
+
     public int keyCount
     {
         get { return numKeys; }

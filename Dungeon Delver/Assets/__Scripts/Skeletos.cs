@@ -30,6 +30,18 @@ public class Skeletos : Enemy, IFacingMover {
         if (Time.time >= timeNextDecision)
             DecideDirection();
 
+        //Only move if Dray is in the room
+        GameObject d = GameObject.Find("Dray");
+        Dray player = (Dray) d.GetComponent(typeof(Dray));
+        if (player.GetRoomNum() == roomNum)
+        {
+            speed = 2;
+        }
+        else
+        {
+            speed = 0;
+        }
+
         //rigid is inherited from Enemy and is initialized in Enemy.Awake()
         rigid.velocity = directions[facing] * speed;
 	}
