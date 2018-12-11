@@ -1,14 +1,12 @@
 ﻿<Properties StartupConfiguration="{AB661688-7F8D-F030-BFD0-79AA71078BDF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/__Scripts/Bat.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/__Scripts/Dray.cs">
     <Files>
       <File FileName="Assets/__Scripts/Tile.cs" Line="32" Column="45" />
-      <File FileName="Assets/__Scripts/Dray.cs" Line="1" Column="1" />
+      <File FileName="Assets/__Scripts/Dray.cs" Line="290" Column="9" />
       <File FileName="Assets/__Scripts/Enemy.cs" Line="16" Column="49" />
       <File FileName="Assets/__Scripts/Skeletos.cs" Line="33" Column="1" />
       <File FileName="Assets/Resources/DelverData_Joe.txt" Line="1" Column="1" />
-      <File FileName="Assets/__Dungeon_Editor/EditorMap.cs" Line="95" Column="1" />
-      <File FileName="Assets/__Scripts/Bat.cs" Line="44" Column="10" />
-      <File FileName="Assets/__Scripts/Knight.cs" Line="1" Column="1" />
+      <File FileName="Assets/__Scripts/CamFollowDray.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
