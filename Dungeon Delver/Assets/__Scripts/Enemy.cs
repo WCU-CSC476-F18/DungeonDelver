@@ -43,7 +43,6 @@ public class Enemy : MonoBehaviour
             invincible = false;
 
         sRend.color = invincible ? Color.red : Color.white;
-
         if(knockback)
         {
             rigid.velocity = knockbackVel;
@@ -54,7 +53,7 @@ public class Enemy : MonoBehaviour
         knockback = false;
     }
 
-    void OnTriggerEnter(Collider colld)
+    protected virtual void OnTriggerEnter(Collider colld)
     {
         //Return if this can't be damaged
         if (invincible)
@@ -77,34 +76,39 @@ public class Enemy : MonoBehaviour
 
         if(dEf.knockback)   //knockback this
         {
-            //Determine the direction of knockback
-            Vector3 delta = transform.position - colld.transform.root.position;
-
-            if(Mathf.Abs(delta.x) >= Mathf.Abs(delta.y))
-            {
-                //Knockback should be horizontal
-                delta.x = (delta.x > 0) ? 1 : -1;
-                delta.y = 0;
-            }
-            else
-            {
-                //Knockback should be vertical
-                delta.x = 0;
-                delta.y = (delta.y > 0) ? 1 : -1;
-            }
-
-            //Apply knockback speed to the Rigidbody
-            knockbackVel = delta * knockbackSpeed;
-            rigid.velocity = knockbackVel;
-
-            //Set mode to knockback and set time to stop knockback
-            knockback = true;
-            knockbackDone = Time.time + knockbackDuration;
-            anim.speed = 0;
+            knockBack(colld);
         }
     }
 
-    void Die()
+    public void knockBack(Collider colld)
+    {
+        //Determine the direction of knockback
+        Vector3 delta = transform.position - colld.transform.root.position;
+
+        if (Mathf.Abs(delta.x) >= Mathf.Abs(delta.y))
+        {
+            //Knockback should be horizontal
+            delta.x = (delta.x > 0) ? 1 : -1;
+            delta.y = 0;
+        }
+        else
+        {
+            //Knockback should be vertical
+            delta.x = 0;
+            delta.y = (delta.y > 0) ? 1 : -1;
+        }
+
+        //Apply knockback speed to the Rigidbody
+        knockbackVel = delta * knockbackSpeed;
+        rigid.velocity = knockbackVel;
+
+        //Set mode to knockback and set time to stop knockback
+        knockback = true;
+        knockbackDone = Time.time + knockbackDuration;
+        anim.speed = 0;
+    }
+
+    public void Die()
     {
         GameObject go;
         if(guaranteedItemDrop != null)

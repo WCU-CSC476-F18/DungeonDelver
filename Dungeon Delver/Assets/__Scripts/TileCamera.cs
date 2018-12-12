@@ -40,7 +40,7 @@ public class TileCamera : MonoBehaviour {
 
     public void LoadMap()
     {
-        // Create the TILE_ANCHOR. All Tiles will have this as their parent;
+        // Create the TILE_ANCHOR. All Tiles will have this as their parent
         GameObject go = new GameObject("TILE_ANCHOR");
         TILE_ANCHOR = go.transform;
         //Load all of the Sprites from mapTiles
