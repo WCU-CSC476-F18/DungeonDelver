@@ -284,7 +284,8 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
                 break;
 
             case PickUp.eType.treasure:
-                SceneManager.LoadScene("Game_Over");
+                //Polymorphically load the next scene
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 break;
         }
 

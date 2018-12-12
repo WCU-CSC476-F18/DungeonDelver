@@ -17,6 +17,6 @@ public class StartButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        SceneManager.LoadScene("_Scene_Hat");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
