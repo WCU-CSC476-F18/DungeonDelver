@@ -65,6 +65,9 @@ public class Enemy : MonoBehaviour
         if (dEf == null)
             return;
 
+        //Play EnemyHit sound
+        FindObjectOfType<AudioManager>().PlaySound("EnemyHit");
+
         //Subtract the damage amount from health
         health -= dEf.damage;
         if (health <= 0)

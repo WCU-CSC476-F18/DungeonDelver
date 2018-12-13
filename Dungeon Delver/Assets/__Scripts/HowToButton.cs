@@ -19,10 +19,10 @@ public class HowToButton : MonoBehaviour {
     {
         Controls.GetComponent<Text>();
         Controls.text = "Move: W, A, S, and D keys" +
-            "\nSword: SPACEBAR\nGrappler: J" +
+            "\nSword: SPACEBAR\nGrappler: L SHIFT" +
             "\nTraverse a dangerous dungeon to find the treasure at the end";
         grapplerPickup.GetComponent<GameObject>();
-        Vector3 grapplerPosition = new Vector3(-4.43f, -1.91f, 0);
+        Vector3 grapplerPosition = new Vector3(-2.88f, -1.91f, 0);
         grapplerPickup.transform.localScale = new Vector3(1, 1, 1);
         Instantiate(grapplerPickup, grapplerPosition, transform.rotation);
     }

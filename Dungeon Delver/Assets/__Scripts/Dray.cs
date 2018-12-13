@@ -225,6 +225,9 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
         DamageEffect dEf = coll.gameObject.GetComponent<DamageEffect>();
         if (dEf == null) return; //If no DamageEffect, exit this method
 
+        //Play PlayerHurt sound
+        FindObjectOfType<AudioManager>().PlaySound("PlayerHurt");
+
         health -= dEf.damage; // Subtract the damage amount from health
         invincible = true; //Make Dray invincible
         invincibleDone = Time.time + invincibleDuration;
@@ -273,23 +276,32 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
         {
             case PickUp.eType.health:
                 health = Mathf.Min(health + 2, maxHealth);
+                FindObjectOfType<AudioManager>().PlaySound("HealthKeyPickUp");
                 break;
 
             case PickUp.eType.key:
+                FindObjectOfType<AudioManager>().PlaySound("HealthKeyPickUp");
                 keyCount++;
                 break;
 
             case PickUp.eType.grappler:
                 hasGrappler = true;
+                FindObjectOfType<AudioManager>().PlaySound("ItemObtained");
                 break;
 
             case PickUp.eType.treasure:
                 //Polymorphically load the next scene
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                FindObjectOfType<AudioManager>().PlaySound("ItemObtained");
+                Invoke("TreasureObtained", 1.0f);
                 break;
         }
 
         Destroy(colld.gameObject);
+    }
+
+    void TreasureObtained()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ResetInRoom(int healthLoss = 0)

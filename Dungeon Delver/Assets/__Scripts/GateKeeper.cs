@@ -56,6 +56,7 @@ public class GateKeeper : MonoBehaviour {
             case lockedR:
                 if (facing != 0) return;
                 ti.SetTile(ti.x, ti.y, openR);
+                FindObjectOfType<AudioManager>().PlaySound("DoorUnlock");
                 break;
            
             case lockedUR:
@@ -63,6 +64,7 @@ public class GateKeeper : MonoBehaviour {
                 ti.SetTile(ti.x, ti.y, openUR);
                 ti2 = TileCamera.TILES[ti.x - 1, ti.y];
                 ti2.SetTile(ti2.x, ti2.y, openUL);
+                FindObjectOfType<AudioManager>().PlaySound("DoorUnlock");
                 break;
 
             case lockedUL:
@@ -70,11 +72,13 @@ public class GateKeeper : MonoBehaviour {
                 ti.SetTile(ti.x, ti.y, openUL);
                 ti2 = TileCamera.TILES[ti.x + 1, ti.y];
                 ti2.SetTile(ti2.x, ti2.y, openUR);
+                FindObjectOfType<AudioManager>().PlaySound("DoorUnlock");
                 break;
 
             case LockedL:
                 if (facing != 2) return;
                 ti.SetTile(ti.x, ti.y, openL);
+                FindObjectOfType<AudioManager>().PlaySound("DoorUnlock");
                 break;
 
             case LockedDL:
@@ -82,6 +86,7 @@ public class GateKeeper : MonoBehaviour {
                 ti.SetTile(ti.x, ti.y, openDL);
                 ti2 = TileCamera.TILES[ti.x + 1, ti.y];
                 ti2.SetTile(ti2.x, ti2.y, openDR);
+                FindObjectOfType<AudioManager>().PlaySound("DoorUnlock");
                 break;
 
             case lockedDR:
@@ -89,6 +94,7 @@ public class GateKeeper : MonoBehaviour {
                 ti.SetTile(ti.x, ti.y, openDR);
                 ti2 = TileCamera.TILES[ti.x - 1, ti.y];
                 ti2.SetTile(ti2.x, ti2.y, openDL);
+                FindObjectOfType<AudioManager>().PlaySound("DoorUnlock");
                 break;
 
             default:
