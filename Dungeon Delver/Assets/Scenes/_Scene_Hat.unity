@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 240349987}
   - component: {fileID: 240349986}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DungeonTheme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
